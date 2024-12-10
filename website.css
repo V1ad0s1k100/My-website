@@ -117,9 +117,12 @@
   overflow: hidden;
 }
 
+/* Body обрезает переполнение по горизонтали */
+
 body{
     font-size: 16px;    
     font-family: var(--font-family-Poppins);
+    overflow-x: hidden;
 }
 
 .header-main {
@@ -608,6 +611,13 @@ body{
         font-size: 0.25em;
         left: -35px;
     }
+    .banner-button-orange {
+        width: 150px;
+        height: 55px;
+        padding: 18px 0;
+        margin-inline: auto;
+        font-size: 0.4em;
+    }
 }
 
 @media (max-width: 360px) {
@@ -661,12 +671,6 @@ body{
         bottom: 12px;
     }
 
-    .banner-button-orange {
-        width: 150px;
-        height: 55px;
-        padding: 18px 0;
-        margin-inline: auto;
-        font-size: 0.4em;
-    }
+
 
 }

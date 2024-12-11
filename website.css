@@ -122,11 +122,10 @@
 body{
     font-size: 16px;    
     font-family: var(--font-family-Poppins);
-    overflow-x: hidden;
 }
 
 .header-main {
-    display: flex;
+    display: none;
     max-width: calc(100vw - 150px - 150px);
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -247,7 +246,7 @@ body{
 
 
 .content-banner {
-    max-width: 80vw;
+    max-width: min(80vw, 1440px);
     padding-top: 18px;
     margin-inline: auto;
 }
@@ -266,7 +265,7 @@ body{
 
 .banner-best-destimination {
     color: var(--color-orange-dark);
-    font-size: 0.25em;
+    font-size: clamp(12px, 1.39vw, var(--font-size-20));
     font-weight: var(--font-width-Bold);
     text-transform: uppercase;
     line-height: 1.88;
@@ -274,7 +273,7 @@ body{
 
 .banner-title {
     font-family: var(--font-family-Volkhov);
-    font-size: 1em;
+    font-size: clamp(45px, 5.83vw, var(--font-size-84));
     font-weight: var(--font-width-Bold);
     line-height: 1;
     color: var(--color-blue-dark);
@@ -302,12 +301,10 @@ body{
     font-size: var(--font-size-16);
     font-weight: var(--font-width-Medium);
     line-height: 1.88;
-    max-width: 477px;
 }
 
 .banner-box-buttons {
     display: flex;
-    width: 380px;
     column-gap: 44px;
 }
 
@@ -328,81 +325,49 @@ body{
 
 .banner-box-circle {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 52px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--color-orange-dark);
-    box-shadow: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
-    position: relative;
-    user-select: none;
-    transition: var(--transition);
-    color: var(--color-gray-alternative);
-}
-
-.banner-button-circle::after {
-    content: 'Play Demo';
-    display: inline-block;
-    position: absolute;
-    white-space: nowrap;
-    rotate: -90deg;
-    color: currentColor;
-    top: -100px;
-    left: -40px;
-    font-size: 0.2em;
+    column-gap: 20px;
 }
 
 .banner-button-circle {
-    position: relative;
-    right: -6px;
-    width: 15px;
+    display: flex;
+    flex-shrink: 0;
+    width: 52px;
     aspect-ratio: 1;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 10px solid var(--color-light);
-    rotate: 90deg;
+    background-color: var(--color-orange-dark);
+    user-select: none;
+    transition: var(--transition);
+    color: var(--color-gray-alternative);
+
+}
+
+.banner-button-circle-title {
+    position: relative;
+    width: 150px;
+    height: 50px;
+}
+
+.banner-button-circle-title::after {
+    content: 'Play Demo';
+    position: absolute;
+    white-space: nowrap;
+    color: var(--color-dark);
+    font-size: clamp(16px, 1.18vw, 17px);
 }
 
 .banner-treveller {
     display: flex;
     flex-shrink: 0;
     aspect-ratio: 1;
+    width: min(53.13vw, 765px);
     left: -100px;
     position: relative;
 }
 
 .banner-picture-traveller {
-    width: 100%;
-    height: 100%;
     object-fit: scale-down;
     position: relative;
     z-index: var(--z-index-2);
 }
-
-.banner-treveller::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 138px;
-    height: 95px;
-    background: url('./icon/banner/banner-plane.png') center / contain  no-repeat;
-    left: 100px;
-    top: 50px;
-}
-
-.banner-treveller::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 138px;
-    height: 95px;
-    background: url('./icon/banner/banner-plane.png') center / contain  no-repeat;
-    z-index: var(--z-index-1);
-    right: -30px;
-    top: 16%;
-}
-
 
 @media (hover: hover) {
     /* Arrow in EN */
@@ -449,206 +414,47 @@ body{
     }
 }
 
-@media (max-width: 1370px) {
-    .header-main {
-        column-gap: 20px;
-    }
 
-    .header-main .main-menu .main-menu-list {
-        grid-template-columns: repeat(7, 130px);
-        column-gap: 0px;
-    }
-
-    .banner-main-title {
-        font-size: 60px;
-    }
-
-    .banner-title-box-line::before {
-        right: -66px;
-        bottom: 15px;
-    }
-
-    .banner-button-circle::after {
-        top: -70px;
-        left: -30px;
-    }
-
-    .banner-treveller {
-        width: 60%;
-    }
-}
-
-@media (max-width: 1250px) {
-    .header-main {
-        column-gap: 20px;
-    }
-
-    .header-main .main-menu .main-menu-list {
-        grid-template-columns: repeat(7, 120px);
-        column-gap: 0;
-    }
-}
-
-@media (max-width: 1150px) {
-    .header-main { 
-        column-gap: 20px;
-    }
-    .header-main .main-menu .main-menu-list {
-        grid-template-columns: repeat(7, 110px);
-        column-gap: 0px;
-    }
-    .banner-main-title {
-        padding-top: 50px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .header-main {
-        column-gap: 40px;
-    }
-    .header-main .main-menu .main-menu-list {
-        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-        column-gap: 50px;
-        row-gap: 20px;
-    }
-}
-
-@media (max-width: 900px) {
-    .header-main {
-        column-gap: 40px;
-    }
-
-    .header-main .main-menu .main-menu-list {
-        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-        row-gap: 20px;
-    }
-
+@media (max-width: 750px) {
     .banner-treveller {
         display: none;
-    }
-
-    .banner-box-buttons {
-        width: 60%;
-        column-gap: 80px;
-    }
-}
-
-@media (max-width: 800px) {
-    .header-main {
-        justify-content: space-between;
-        max-width: calc(100vw - 100px);
-    }
-    .header-main .main-menu {
-        display: none;
-    }
-
-    .header-container-altarnative {
-        display: block;
-    }
-
-    .header-main .main-logo {
-        object-fit: contain;
-        width: 110px;
-        height: 40px;
-    }
-
-    .banner-main-title {
-        padding-top: 15px;
-    }
-
-    .banner-box-buttons {
-        width: 60%;
-        column-gap: 50px;
-    }
-
-}
-
-@media (max-width: 700px) {
-    .banner-box-buttons {
-        width: 80%;
-        column-gap: 35px;
-    }
-}
-
-@media (max-width: 500px) {
-    .header-main {
-        column-gap: 20px;
-    }
-
-    .banner-main-title {
-        font-size: 45px;
-    }
-
-    .banner-best-destimination {
-        font-size: 0.32em;
-    }
-
-    .banner-title-comment {
-        font-size: var(--font-size-14);
-    }
-
-    .banner-box-buttons {
-        flex-wrap: wrap;
-        row-gap: 20px;
-        width: 50%;
-        column-gap: 35px;
-        font-size: 1.1em;
-    }
-
-    .banner-button-circle::after {
-        font-size: 0.25em;
-        left: -35px;
-    }
-    .banner-button-orange {
-        width: 150px;
-        height: 55px;
-        padding: 18px 0;
-        font-size: 0.4em;
-    }
-
-}
-
-@media (max-width: 360px) {
-    .header-main {
-        max-width: calc(100vw - 50px);
-        column-gap: 20px;
     }
 
     .content-banner {
-        padding-top: 10px;
-        padding-inline: 0;
+        max-width: 90vw;
     }
 
-    .banner-main-title {
-        padding-top: 15px;
-        font-size: 40px;
-        margin-inline: auto;
-        row-gap: 15px;
-    }
-
-    .banner-best-destimination {
-        font-size: 0.3em;
+    .banner {
+        justify-content: center;
     }
 
     .banner-title-comment {
-        font-size: var(--font-size-14);
-    }
-
-    .banner-box-buttons {
-        flex-wrap: wrap;
-        row-gap: 20px;
-        width: 50%;
-        column-gap: 35px;
-        font-size: 1.1em;
+        max-width: 70%;
+        flex-shrink: 1.5;
     }
 
     .banner-button-circle::after {
-        font-size: 0.3em;
-        left: -35px;
+        
+    }
+}
+
+@media (max-width: 420px) {
+
+    .banner-main-title {
+        row-gap: 20px;
     }
 
-    .banner-title-box-line::before {
-        right: -52px;
-        bottom: 12px;
+    .banner-title {
+        font-size: clamp(37px, 2.8vw, var(--font-size-84));
+    }
+
+    .banner-title-comment {
+        max-width: 100%;
+    }
+
+    .banner-box-buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 }

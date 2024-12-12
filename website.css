@@ -256,6 +256,8 @@ body{
 }
 
 .banner-main-title {
+    position: relative;
+    z-index: var(--z-index-2);
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -287,13 +289,13 @@ body{
 .banner-title-box-line::before {
     content: '';
     display: inline-block;
-    width: 166%;
-    height: 11%;
-    right: -110px;
-    bottom: 22px;
+    width: clamp(170px, 26.74vw, 385px);
+    height: 12px;
+    left: -15%;
     position: absolute;
     z-index: -100;
-    background: url('/icon/banner/banner-line-title.png') center / contain no-repeat;
+    background: url(/icon/banner/banner-line-title.png) center / contain no-repeat;
+    bottom: 17%;
 }
 
 .banner-title-comment {
@@ -309,48 +311,71 @@ body{
 }
 
 .banner-button-orange {
-    width: 170px;
+    width: clamp(140px, 11.8vw, 170px);
     height: 60px;
     border: none;
     color: var(--color-light);
-    padding: 19px 26px 18px 27px;
     background-color: var(--color-yellow-dark);
-    font-size: var(--font-size-18);
+    font-size: clamp(15.5px, 1.25vw, 18px);
     white-space: nowrap;
     border-radius: 10px;
     box-shadow: 0px 20px 35px 0px rgba(241, 165, 1, 0.15);
     line-height: 1.28;
+    text-align: center;
     transition: var(--transition);
 }
 
 .banner-box-circle {
     display: flex;
-    column-gap: 20px;
+    column-gap: 15px;
+    color: var(--color-orange-dark);
+    transition: var(--transition-duration);
 }
 
 .banner-button-circle {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 0;
     width: 52px;
     aspect-ratio: 1;
-    background-color: var(--color-orange-dark);
+    background-color: currentColor;
     user-select: none;
     transition: var(--transition);
-    color: var(--color-gray-alternative);
+    border-radius: 50%;
+    box-shadow: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
+}
+
+
+/* Доделать треугольник в круглой кнопке */
+
+.banner-button-circle::after {
+    content: '';
+    width: 0;
+    aspect-ratio: 1;
+    position: relative;
+    left: 2px;
+    display: flex;
+    border: 0 solid transparent;
+    border-bottom-width: 6.5px;
+    border-top-width: 6.5px;
+    border-left: 11px solid var(--color-light);
 
 }
 
 .banner-button-circle-title {
-    position: relative;
-    width: 150px;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    color: var(--color-dark);
 }
 
 .banner-button-circle-title::after {
     content: 'Play Demo';
     position: absolute;
     white-space: nowrap;
-    color: var(--color-dark);
+    color: currentColor;
     font-size: clamp(16px, 1.18vw, 17px);
 }
 
@@ -366,7 +391,7 @@ body{
 .banner-picture-traveller {
     object-fit: scale-down;
     position: relative;
-    z-index: var(--z-index-2);
+    z-index: var(--z-index-1);
 }
 
 @media (hover: hover) {
@@ -408,12 +433,10 @@ body{
         color: var(--color-yellow-dark);
     }
 
-    .banner-box-circle:hover {
-        background-color: var(--color-orange);
-        color: var(--color-dark);
+    .banner-box-circle:hover  {
+        opacity: 0.9;
     }
 }
-
 
 @media (max-width: 750px) {
     .banner-treveller {
@@ -433,8 +456,8 @@ body{
         flex-shrink: 1.5;
     }
 
-    .banner-button-circle::after {
-        
+    .banner-title-box-line::before {
+        width: clamp(195px, 26.74vw, 385px);
     }
 }
 
@@ -448,6 +471,10 @@ body{
         font-size: clamp(37px, 2.8vw, var(--font-size-84));
     }
 
+    .banner-title-box-line::before {
+        width: clamp(170px, 26.74vw, 385px);
+    }
+
     .banner-title-comment {
         max-width: 100%;
     }
@@ -456,5 +483,10 @@ body{
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+    }
+
+    .banner-box-circle {
+        width: clamp(160px, 45%, 200px);
+        column-gap: 10px;
     }
 }

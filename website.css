@@ -74,7 +74,6 @@
     --font-width-SemiBold: 600;
     --font-width-Bold: 700;
 
-    --font-size-main: 1.2em;
     --font-size-84: 84px;
     --font-size-50: 50px;
     --font-size-44: 44px;
@@ -117,16 +116,16 @@
   overflow: hidden;
 }
 
-/* Body обрезает переполнение по горизонтали */
-
 body{
     font-size: 16px;    
     font-family: var(--font-family-Poppins);
 }
 
+/* Header content */
+
 .header-main {
-    display: none;
-    max-width: calc(100vw - 150px - 150px);
+    display: flex;
+    max-width: calc(100vw - 2* 9.72vw);
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
@@ -136,11 +135,11 @@ body{
 }
 
 .header-container-altarnative {
-    width: 50px;
+    display: none;
+    min-width: 50px;
     aspect-ratio: 1;
     border: 2px solid currentColor;
     border-radius: 50%;
-    display: none;
     transition: var(--transition);
 }
 
@@ -161,15 +160,15 @@ body{
 }
 
 .header-main .main-logo img {
-    width: 114px;
+    width: clamp(100px, 9.3vw, 134px);
     height: 34px;
 }
 
 .header-main .main-menu-list {
     list-style-type: none;
-    display: grid;
-    grid-template: repeat(1, 1fr) / repeat(7, 1fr);
-    font-size: var(--font-size-main);
+    display: flex;
+    column-gap: 41px;
+    font-size: var(--font-size-17);
     font-family: var(--font-family-GoogleSans);
     font-weight: var(--font-width-Medium);
 }
@@ -215,6 +214,7 @@ body{
 
 .header-main .main-menu-item:has(.menu-item-list-EN) {
     position: relative;
+    z-index: var(--z-index-3);
 }
 
 .header-main .main-menu-item:has(.menu-item-list-EN) ul {
@@ -227,7 +227,6 @@ body{
 }
 
 .header-main .main-menu-item:has(.menu-item-list-EN) ul a {
-  font-size: 1em;
   text-decoration: none;
   color: var(--color-dark);  
   transition: var(--transition);
@@ -240,10 +239,10 @@ body{
 }
 
 .header-main .main-menu-item .menu-item-list-EN span {
-    transition-delay: 0.3s;
+    transition-duration: 0.3s;
 }
 
-
+/* Banner content */
 
 .content-banner {
     max-width: min(80vw, 1440px);
@@ -253,6 +252,7 @@ body{
 
 .banner {
     display: flex;
+    height: calc(100vh - 18px - 47px - 2 * 50px);
 }
 
 .banner-main-title {
@@ -346,9 +346,6 @@ body{
     box-shadow: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
 }
 
-
-/* Доделать треугольник в круглой кнопке */
-
 .banner-button-circle::after {
     content: '';
     width: 0;
@@ -438,7 +435,28 @@ body{
     }
 }
 
+@media (max-width: 1024px) {
+    .header-main .main-menu-list {
+        flex-wrap: wrap;
+    }
+    .header-main {
+        column-gap: 50px;
+    }
+}
+
 @media (max-width: 750px) {
+    .header-main {
+        padding-top: 23px;
+    }
+
+    .header-main .main-menu-list {
+        display: none;
+    }
+
+    .header-container-altarnative {
+        display: block;
+    }
+
     .banner-treveller {
         display: none;
     }
@@ -468,7 +486,7 @@ body{
     }
 
     .banner-title {
-        font-size: clamp(37px, 2.8vw, var(--font-size-84));
+        font-size: clamp(43px, 2.8vw, var(--font-size-84));
     }
 
     .banner-title-box-line::before {

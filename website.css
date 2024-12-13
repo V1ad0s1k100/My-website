@@ -457,10 +457,6 @@ body{
         display: block;
     }
 
-    .banner-treveller {
-        display: none;
-    }
-
     .content-banner {
         max-width: 90vw;
     }
@@ -469,13 +465,17 @@ body{
         justify-content: center;
     }
 
+    .banner-title-box-line::before {
+        width: clamp(195px, 26.74vw, 385px);
+    }
+
     .banner-title-comment {
         max-width: 70%;
         flex-shrink: 1.5;
     }
 
-    .banner-title-box-line::before {
-        width: clamp(195px, 26.74vw, 385px);
+    .banner-treveller {
+        display: none;
     }
 }
 
@@ -508,3 +508,9 @@ body{
         column-gap: 10px;
     }
 }
+
+@media (max-height: 650px) or (min-height: 750px) {
+    .banner {
+        height: 100%;
+    }
+} 

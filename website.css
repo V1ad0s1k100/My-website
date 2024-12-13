@@ -664,6 +664,10 @@ body{
     .banner-treveller {
         display: none;
     }
+
+    .gategoty-section-title::before {
+        right: -20px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -694,8 +698,13 @@ body{
         width: clamp(160px, 45%, 200px);
         column-gap: 10px;
     }
+
     .gategory-best-services-title {
-        font-size: clamp(29px, 3.47vw , var(--font-size-50));
+        font-size: clamp(27px, 3.47vw , var(--font-size-50));
+    }
+
+    .gategoty-section-title::before {
+        right: -7px;
     }
 }
 

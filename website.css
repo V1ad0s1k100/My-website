@@ -603,7 +603,7 @@ body{
 
 @media (max-width: 1250px) {
     .gategoty-section-title::before {
-
+        right: -20px;
     }
 
     .gategory-box-slides {
@@ -664,10 +664,6 @@ body{
     .banner-treveller {
         display: none;
     }
-
-    .gategoty-section-title::before {
-        right: -20px;
-    }
 }
 
 @media (max-width: 420px) {
@@ -704,7 +700,7 @@ body{
     }
 
     .gategoty-section-title::before {
-        right: -7px;
+        right: -5px;
     }
 }
 

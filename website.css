@@ -396,21 +396,21 @@ body{
 
 /* Gategory-section */
 
-.gategory-section {
+.gategory-section, .top-selling-section {
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
 
-.gategoty-section-title, .gategory-best-services-title {
+.gategoty-section-title, .gategory-best-services-title, .top-selling-section-title, .top-selling-title-top-destinations {
     position: relative;
     text-align: center;
     white-space: nowrap;
     z-index: var(--z-index-2);
 }
 
-.gategoty-section-title {
+.gategoty-section-title, .top-selling-section-title {
     
     color: var(--color-blue-alternative);
     font-size: clamp(14px, 1.25vw , var(--font-size-18));
@@ -430,21 +430,21 @@ body{
     z-index: var(--z-index-1);
 }
 
-.gategory-best-services-title {
+.gategory-best-services-title, .top-selling-title-top-destinations {
     font-family: var(--font-family-Volkhov);
     font-weight: var(--font-width-Bold);
     font-size: clamp(35px, 3.47vw , var(--font-size-50));
     color: var(--color-blue-dark-alternative);
 }
 
-.gategory-box-slides {
+.gategory-box-slides, .top-selling-box-slides {
     padding-top: 58px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
 
-.gategory-slides-item {
+.gategory-slides-item, .top-selling-slides-item {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -557,6 +557,91 @@ body{
     color: var(--color-blue-alternative);
 }
 
+/* Top-selling-section */
+
+.top-selling-section {
+    padding-top: 123px;
+}
+
+.top-selling-box-slides {
+    column-gap: 36px;
+    padding-top: 60px;
+}
+
+.top-selling-slides-item {
+    position: relative;
+    width: clamp(260px, 21.88vw, 315px);
+    height: 457px;
+    overflow-x: hidden;
+    z-index: var(--z-index-1);
+    background-color: var(--color-light);
+    border-radius: 24px;
+    box-shadow: 0px 1.85px 3.15px 0px rgba(0, 0, 0, 0),0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.01),0px 20px 13px 0px rgba(0, 0, 0, 0.01),0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.01),0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.02),0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+    text-decoration: none;
+    color: var(--color-blue-alternative);
+}
+
+.top-selling-slides-item-spiral {
+    position: relative;
+}
+
+.top-selling-slides-item::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 474px;
+    height: 638px;
+    z-index: var(--z-index-2);
+}
+
+.top-selling-slides-item:first-child::before {
+    background: url('./image/top-selling-section/top-selling-item-box-kolizey.svg');
+}
+
+.top-selling-slides-item:nth-child(2)::before {
+    background: url('./image/top-selling-section/top-selling-item-box-bigben.svg') ;
+}
+
+.top-selling-slides-item-spiral::after {
+    content: '';
+    position: absolute;
+    top: 166px;
+    right: -64px;
+    width: 96px;
+    height: 252px;
+    background: url('./icon/top-selling-section/top-selling-slides-right-spiral.svg');
+}
+
+.top-selling-slides-item:last-child::before {
+    background: url('./image/top-selling-section/top-selling-item-box-temple.svg') ;
+}
+
+.top-selling-item-box {
+    display: grid;
+    width: calc(100% - 40px);
+    row-gap: 19px;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    padding-block: 27px 42px;
+    margin-inline: auto;
+}
+
+.top-selling-item-box-title-price {
+    text-align: right;
+}
+
+.top-selling-item-box-title-duration {
+    grid-area: 2/1/3/3;
+}
+
+.top-selling-item-box-title-duration::before {
+    content: '';
+    display: inline-block;
+    width: 16.5px;
+    margin-right: 17px;
+    aspect-ratio: 1;
+    background: url('./icon/top-selling-section/top-selling-title-dutation-check-mark.svg') center / contain no-repeat;
+}
+
 @media (hover: hover) {
     /* Arrow in EN */
     .header-main .main-menu-item .menu-item-list-EN:hover span {
@@ -606,7 +691,7 @@ body{
         right: -20px;
     }
 
-    .gategory-box-slides {
+    .gategory-box-slides, .top-selling-box-slides {
         flex-wrap: wrap;
         justify-content: space-around;
         column-gap: 20px;
@@ -666,6 +751,12 @@ body{
     }
 }
 
+@media (max-width: 500px)  {
+    .top-selling-slides-item-spiral::after {
+        display: none;
+    }
+}
+
 @media (max-width: 420px) {
 
     .banner-main-title {
@@ -695,7 +786,7 @@ body{
         column-gap: 10px;
     }
 
-    .gategory-best-services-title {
+    .gategory-best-services-title, .top-selling-title-top-destinations {
         font-size: clamp(27px, 3.47vw , var(--font-size-50));
     }
 

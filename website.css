@@ -67,9 +67,11 @@
     --color-shadow-blue: #59B1E6;
     --color-blue-alternative: #5E6282;
     --color-gray-alternative: #686D77;
+    --color-gray-alternative-one: #84829A;
     --color-blue-dark-alternative: #14183E;
     --color-blue-dark-alternative-one: #1E1D4C;
     --color-blue-dark-alternative-two: #181E4B;
+    --color-violet: #8A79DF;
 
 
     --font-width-Regular: 400;
@@ -760,19 +762,40 @@ body{
 .easy-fast-box-picture-card {
     position: absolute;
     display: flex;
+    justify-content: center;
     width: 263px;
     height: 129px;
+    padding-block: 16px 22px;
     border-radius: 18px;
+    background-color: var(--color-light);
     box-shadow: 0px 1.85px 3.15px 0px rgba(0, 0, 0, 0),0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.01),0px 20px 13px 0px rgba(0, 0, 0, 0.01),0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.01),0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.02),0px 100px 80px 0px rgba(0, 0, 0, 0.02);
     top: 219px;
     left: 222px;
-    
 }
 
 .easy-fast-box-picture-card-picture {
+    align-self: start;
     width: 74px;
     height: 66px;
     clip-path: circle();
+}
+
+.easy-fast-box-picture-card-comment {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-width-Medium);
+    color: var(--color-gray-alternative-one);
+}
+
+.easy-fast-box-picture-card-title {
+
+}
+
+.easy-fast-box-picture-card-completed {
+
+}
+
+.easy-fast-box-picture-card-completed:: {
+    color: var(--color-violet);
 }
 
 

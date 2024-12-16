@@ -68,11 +68,13 @@
     --color-shadow-blue: #59B1E6;
     --color-blue-alternative: #5E6282;
     --color-gray-alternative: #686D77;
+    --color-gray-lite: #E5E5E5;
     --color-gray-alternative-one: #84829A;
     --color-gray-alternative-two: #84829A;
     --color-blue-dark-alternative: #14183E;
     --color-blue-dark-alternative-one: #1E1D4C;
     --color-blue-dark-alternative-two: #181E4B;
+    --color-blue-dark-alternative-three: #39425D;
     --color-violet: #8A79DF;
 
 
@@ -418,8 +420,7 @@ body{
     z-index: var(--z-index-2);
 }
 
-.gategoty-section-title, .top-selling-section-title, .easy-fast-section-title {
-    
+.gategoty-section-title, .top-selling-section-title, .easy-fast-section-title, .testimonials-section-title, .testimonials-slide-name, .testimonials-slides-name {
     color: var(--color-blue-alternative);
     font-size: clamp(14px, 1.25vw , var(--font-size-18));
     font-weight: var(--font-width-SemiBold);
@@ -438,7 +439,7 @@ body{
     z-index: var(--z-index-1);
 }
 
-.gategory-best-services-title, .top-selling-title-top-destinations, .easy-fast-title-reservation {
+.gategory-best-services-title, .top-selling-title-top-destinations, .easy-fast-title-reservation, .testimonials-section-title-reviews {
     font-family: var(--font-family-Volkhov);
     font-weight: var(--font-width-Bold);
     font-size: clamp(35px, 3.47vw , var(--font-size-50));
@@ -652,7 +653,7 @@ body{
     max-width: 511px;
 }
 
-.easy-fast-section-title {
+.easy-fast-section-title, .testimonials-section-title-reviews {
     text-align: left;
 }
 
@@ -766,6 +767,8 @@ body{
     position: absolute;
     display: flex;
     justify-content: center;
+    column-gap: 5px;
+    margin-inline: auto;
     width: 263px;
     height: 129px;
     padding-block: 16px 22px;
@@ -783,6 +786,10 @@ body{
     clip-path: circle();
 }
 
+.easy-fast-picture-card-box-text {
+    width: 156px;
+}
+
 .easy-fast-box-picture-card-comment {
     font-size: var(--font-size-14);
     font-weight: var(--font-width-Medium);
@@ -795,24 +802,26 @@ body{
 
 .easy-fast-box-picture-card-completed {
     position: relative;
-    padding-block: 13px 9px;
-    border-bottom: 5px solid var(--color-light-alternative);
-    border-radius: 3px;
-}
-
-.easy-fast-box-picture-card-completed::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 40%;
-    height: 5px;
-    background-color: var(--color-violet);
-    bottom: -5px;
-    border-radius: 30px;
+    padding-block: 13px;
 }
 
 .easy-fast-picture-card-completed-number {
     color: var(--color-violet);
+}
+
+.easy-fast-completed-line {
+    height: 7px;
+    width: 156px;
+    margin-bottom: 9px;
+}
+
+.easy-fast-completed-line::-webkit-meter-bar {
+    background-color: var(--color-light-alternative);
+    border: none;
+}
+
+.easy-fast-completed-line::-webkit-meter-optimum-value {
+    background-color: var(--color-violet);
 }
 
 .easy-fast-box-picture-comment {
@@ -874,6 +883,143 @@ body{
     width: 20px;
     height: 19px;
     background: url('./icon/easy-fast-section/easy-fast-box-picture-comment-bottom-heart.svg') center no-repeat;
+}
+
+/* testimonials section
+    
+    Доделать слайды после их изучения в JS
+*/
+
+.testimonials-section {
+    padding-top: 200px;
+    display: flex;
+    column-gap: 33px;
+    flex-wrap: nowrap;
+}
+
+.testimonials-section-title-reviews {
+    padding-top: 8px;
+}
+
+.testimonials-section-counter-slides {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+    padding-top: 82px;
+}
+
+.testimonials-counter-slides-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: transparent;
+}
+
+.testimonials-counter-slides-item::after {
+    content: '';
+    display: block;
+    width: 12px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    background-color: var(--color-gray-lite);
+    border-radius: 50%;
+}
+
+.testimonials-section-counter-slides .is-current::after {
+    background-color: var(--color-blue-dark-alternative-three);
+}
+
+.testimonials-section-slides-box {
+    position: relative;
+}
+
+.testimonials-section-slides-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -37px;
+    top: -34px;
+    width: 68px;
+    aspect-ratio: 1;
+    clip-path: circle();
+    background: url('./icon/testimonials-section/testimonials-section-slide-image-one.svg');
+}
+
+.testimonials-content-slides-item {
+    width: 504px;
+    height: 245px;
+    padding-inline: 34px 68px;
+    background-color: #fff;
+    color: var(--color-blue-alternative);
+    border-radius: 10px;
+    box-shadow: 0px 1.85px 3.15px 0px rgba(0, 0, 0, 0),0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.01),0px 20px 13px 0px rgba(0, 0, 0, 0.01),0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.01),0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.02),0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+}
+
+.testimonials-slide-comment {
+    padding-top: 28px;
+    line-height: 2;
+    font-weight: var(--font-width-Medium);
+}
+
+.testimonials-slide-name {
+    padding-top: 34px;
+    text-transform: none;
+}
+
+.testimonials-content-slide-two-review {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    bottom: -60px;
+    left: 50px;
+    z-index: -100;
+}
+
+.testimonials-section-slides-switch {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 57px;
+    padding-left: 82px;
+    color: rgb(188, 183, 194);
+}
+
+.arrow-slide-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition-duration: 0.15s;
+}
+
+.testimonials-slides-switch-up {
+    position: relative;
+    top: 3px;
+    left: 1px;
+    width: 14px;
+    aspect-ratio: 1;
+    border-top: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    rotate: 45deg;
+    transition-duration: 0.15s;
+}
+
+.testimonials-slides-switch-down {
+    position: relative;
+    bottom: 3px;
+    left: 1px;
+    width: 14px;
+    aspect-ratio: 1;
+    border-top: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    rotate: -135deg;
+    transition-duration: 0.15s;
 }
 
 @media (hover: hover) {
@@ -1006,6 +1152,15 @@ body{
     .top-selling-slides-item:hover {
         scale: 1.05;
     }
+
+    /* Arrow in slides review */
+
+    .arrow-slide-review:hover {
+        background-color: var(--color-gray-lite);
+        color: var(--color-blue-dark-alternative-three);
+    }
+    
+
 }
 
 @media (max-width: 1250px) {

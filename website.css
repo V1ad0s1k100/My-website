@@ -930,6 +930,7 @@ body{
     flex-shrink: 0;
     background-color: var(--color-gray-lite);
     border-radius: 50%;
+    transition-duration: var(--transition-duration);
 }
 
 .testimonials-section-counter-slides .is-current::after {
@@ -1004,6 +1005,7 @@ body{
     aspect-ratio: 1;
     border-radius: 50%;
     transition-duration: 0.15s;
+    user-select: none;
 }
 
 .testimonials-slides-switch-up {
@@ -1168,7 +1170,11 @@ body{
         color: var(--color-blue-dark-alternative-three);
     }
     
+    /* Roundels for displaying the order */
 
+    .testimonials-counter-slides-item:hover.testimonials-counter-slides-item:not(.is-current)::after {
+        background-color: rgba(104, 109, 118, 0.5);
+    }
 }
 
 @media (max-width: 1250px) {

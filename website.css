@@ -1540,6 +1540,26 @@ body{
 
 }
 
+@media (max-width: 1380px) {
+    .easy-fast-section {
+        padding-right: 50px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        margin-right: 20px;
+    }
+
+    .easy-fast-content-box-picture {
+        padding-bottom: 10px;
+    }
+
+    .easy-fast-box-picture-comment-bottom::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 4%;
+    }
+}
+
 @media (max-width: 1250px) {
     .gategoty-section-title::before {
         right: -20px;
@@ -1558,24 +1578,6 @@ body{
 
     .gategory-slides-item:nth-child(4) {
         order: 2;
-    }
-
-    .easy-fast-section {
-        padding-right: 50px;
-        flex-wrap: wrap;
-        row-gap: 30px;
-        margin-right: 20px;
-    }
-
-    .easy-fast-content-box-picture {
-        padding-bottom: 10px;
-    }
-
-    .easy-fast-box-picture-comment-bottom::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 4%;
     }
 
     .testimonials-section {

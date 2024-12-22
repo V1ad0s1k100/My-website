@@ -1217,27 +1217,21 @@ body{
 }
 
 .subscription-input-text {
-    width: clamp(180px, 29.23vw, 421px);
+    width: clamp(260px, 29.23vw, 421px);
     padding: 25px 20px 25px 0;
     border: none;
     border-radius: 0 10px 10px 0;
 }
 
 .subscription-input-button {
-    width: 180px;
+    width: clamp(120px, 12.2vw, 180px);
     height: 68px;
     color: var(--color-light);
     border: none;
     border-radius: 10px;
-    background: linear-gradient(180.00deg, rgb(255, 148, 109),rgb(255, 125, 104) 100%);
+    background: linear-gradient(180deg, rgba(255,148,109), rgba(255,125,104) 100%);
+    transition-duration: var(--transition-duration); 
 }
-
-
-
-
-
-
-
 
 @media (hover: hover) {
     /* Arrow in EN */
@@ -1391,6 +1385,12 @@ body{
     .link-company-item:hover .company-item {
         filter: grayscale(0);
     }
+    /* Button subscribe */
+
+    .subscription-input-button:hover {
+        transform: scale(1.1);
+    }
+
 }
 
 @media (max-width: 1250px) {
@@ -1454,6 +1454,15 @@ body{
         column-gap: 100px;
         justify-items: center;
     }
+
+    .subscription-box-second::after {
+        left: 1.7%;
+        bottom: -31%;
+    }
+
+    .subscription-content-input-box {
+        padding-inline: 50px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1471,6 +1480,10 @@ body{
     
     .cooperation-box {
         column-gap: 6.94vw;
+    }
+
+    .subscription-box-first::after {
+        right: 0;
     }
 }
 
@@ -1536,6 +1549,20 @@ body{
 
     .link-company-item:last-child {
         grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .subscription-box-first::before {
+        right: 0;
+    }
+
+    .subscription-content-title {
+        padding-inline: 50px;
+    }
+
+    .subscription-content-input-box {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
     }
 }
 
@@ -1625,6 +1652,10 @@ body{
 
     .testimonials-content-slide-two-review, .testimonials-section-slides-box::before {
         left: 0;
+    }
+
+    .subscription-input-text {
+        width: clamp(200px, 29.23vw, 421px);
     }
 }
 

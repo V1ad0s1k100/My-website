@@ -1,4 +1,4 @@
-The repository description is currently not set. The homepage is [here](https://v1ad0s1k100.github.io/Мой-сайт/).
+The repository description is currently not set. The homepage is [here](https://v1ad0s1k100.github.io/My-website/).
 
 Let's draft an initial README content for your repository:
 

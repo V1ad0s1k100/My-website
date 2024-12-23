@@ -2,113 +2,316 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Путешествия</title>
-    <link rel="stylesheet" href="css/website.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <title>Jadoo Travel</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="./icon/website-icon.png"  type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <footer>
-            <img src="image/footer/logo.svg" alt="Jadoo">
-            <div>
-                <nav>
+    <header class="header-main">
+        <a href="#" class="main-logo">
+            <img src="./icon/header/Logo.svg" alt="Jadoo logo">
+        </a>
+        <nav class="main-menu">
+            <ul class="main-menu-list">
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Desitnations</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Hotels</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Flights</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Bookings</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link">Login</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" class="main-menu-link menu-item-border">Sing up</a>
+                </li>
+                <li class="main-menu-item">                    
+                    <div class="main-menu-link menu-item-list-EN">EN
+                        <span class="arrow">&#8250</span>
+                    </div>
                     <ul>
-                        <li><a href="#" class="effect">Desitnations</a></li>
-                        <li><a href="#" class="effect">Hotels</a></li>
-                        <li><a href="#" class="effect">Flights</a></li>
-                        <li><a href="#" class="effect">Bookings</a></li>
-                        <li><a href="#" class="effect">Login</a></li>
-                        <li class="sing"><a href="#">Sign up</a></li>
-                        <li class="EN"><a href="#">EN</a>
-                            <ul>
-                                <li><a href="#">русский</a></li>
-                                <li><a href="#">английский</a></li>
-                            </ul>
-                        </li>
+                        <a href="#"><li>Ru</li></a>
+                        <a href="#"><li>En</li></a>
                     </ul>
-                </nav>
-            </div>
-        </footer>
-        <div class="BestDestimination">
-            <div class="travel">
-                <h2>Best Destinations around the world</h2>
-                <pre>Travel, enjoy
-and live a new
-and full life</pre>
-                <img src="image/footer/Decore (1).svg" alt="" class="line">
-                <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-                <div class="block">
-                    <button>Find out more</button>
-                    <img src="image/footer/Play button.svg" alt="">
-                    <div>Play Demo</div>
+                </li>
+            </ul>
+        </nav>
+        <button class="header-container-altarnative" type="button"></button>
+    </header>
+    <main class="content-main">
+        <section class="banner">
+            <div class="banner-main-title">
+                <h1 class="visibilly-hidden">
+                    Traveling Jadoo
+                </h1>
+                <div class="banner-best-destimination">
+                    Best Destinations around the world
+                </div>
+                <h2 class="banner-title">
+                Travel, <span class="banner-title-box-line">enjoy</span><br/>
+                and live a new<br/>
+                and full life</h2>
+                <div class="banner-title-comment">
+                    Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+                </div>
+                <div class="banner-box-buttons">
+                    <a href='#banner-button-main-anchor' class="banner-box-item banner-button-orange">Find out more</a>
+                    <a href='https://play.google.com/store/apps/details?id=yio.tro.psina&hl=ru&pli=1' target="_blank" class="banner-box-item banner-box-circle">
+                        <div class="banner-button-circle">
+                        </div>
+                        <span class="banner-button-circle-title"></span>
+                    </a>
                 </div>
             </div>
-            <div class="women">
-                <img src="image/footer/Traveller 1.svg" alt="" class="PictureWomen">
-                <img src="image/footer/Decore.svg" alt="" class="Decore">
-                <img src="image/footer/plane.svg" alt="" class="Plane">
+            <div class="banner-treveller">
+                <img src="./image/banner/traveller-on-suitcase-together-with-planes.png" alt="A traveler on a suitcase" class="banner-picture-traveller">
             </div>
-        </div>
-        <div class="gategory">
-            <div>
-                <p>CATEGORY</p>
-                <h1>We Offer Best Services</h1>
-            </div>
-            <img src="image/Gategory/Group 4.svg" alt="">
-        </div>
-        <div class="CountinueGategory">
-            <div class="block">
-                <img src="image/CATEGORY/Group 48 (1).svg" alt="">
-                <h4>Calculated Weather </h4>
-                <p>Built Wicket longer admire do barton vanity itself do in it.</p>
-            </div>
-            <div class="block two">
-                <img src="image/CATEGORY/Group 51 (1).svg" alt="">
-                <h4>Best Flights</h4>
-                <p>Engrossed listening. Park gate sell they west hard for the.</p>
-            </div>
-            <div class="block local">
-                <img src="image/CATEGORY/Group 50 (1).svg" alt="">
-                <h4>Local Events</h4>
-                <p>Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
-            </div>
-            <div class="block">
-                <img src="image/CATEGORY/Group 49 (1).svg" alt="">
-                <h4>Customization</h4>
-                <p>We deliver outsourced aviation services for military customers</p>
-            </div>
-        </div>
-        <div class="circle"></div>
-        <div class="TopSelling">
-            <p>Top Selling</p>
-            <h1>Top Destinations</h1>
-        </div>
-        <div class="PictureSity">
-            <div class="block1">
-                <img src="image/Desteminations/Rectangle 14.svg" alt="" class="Sity">
-                <div class="TextBlock">
-                    <p>Rome, Italty</p>
-                    <p class="Dollar">$5,42k</p>
-                    <div><img src="image/Desteminations/Vector.svg" alt=""></div>
+        </section>
+        <section class="gategory-section">
+            <div id="banner-button-main-anchor"></div>
+            <h2 class="gategoty-section-title">gategory</h2>
+            <h3 class="gategory-best-services-title">We Offer Best Services</h3>
+            <div class="gategory-box-slides">
+                <div class="gategory-slides-item gategory-slides-item-antenna">
+                    <div class="gategory-slides-item-box">
+                        <img src="./icon/gategory-section/gategory-item-picture-antenna.png" alt="Picture antenna" class="gategory-slides-item-picture gategory-item-picture-antenna">
+                    </div>
+                    <div class="slides-item-title">Calculated Weather </div>
+                    <p class="gategory-slides-item-comment">Built Wicket longer admire do barton vanity itself do in it.</p>
+                </div>
+                <div class="gategory-slides-item gategory-slides-item-plane">
+                    <div class="gategory-slides-item-box">
+                        <img src="./icon/gategory-section/gategory-item-picture-plane.png" alt="Picture plane" class="gategory-slides-item-picture gategory-item-picture-plane">
+                    </div>
+                    <div class="slides-item-title">Best Flights</div>
+                    <p class="gategory-slides-item-comment">Engrossed listening. Park gate sell they west hard for the.</p>
+                </div>
+                <div class="gategory-slides-item gategory-slides-item-microphone">
+                    <div class="gategory-slides-item-box">
+                        <img src="./icon/gategory-section/gategory-item-picture-microphone.png" alt="Picture microphone" class="gategory-slides-item-picture gategory-item-picture-microphone">
+                    </div>
+                    <div class="slides-item-title">Local Events</div>
+                    <p class="gategory-slides-item-comment">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                </div>
+                <div class="gategory-slides-item gategory-slides-item-gear">
+                    <div class="gategory-slides-item-box">
+                        <img src="./icon/gategory-section/gategory-item-picture-gear.png" alt="Picture gear" class="gategory-slides-item-picture gategory-item-picture-gear">
+                    </div>
+                    <div class="slides-item-title">Customization</div>
+                    <p class="gategory-slides-item-comment">We deliver outsourced
+                    aviation services for
+                    military customers</p>
                 </div>
             </div>
-            <div class="block2">
-                <img src="image/Desteminations/Rectangle 14 (1).svg" alt="" class="Sity">
-                <div class="TextBlock">
-                    <p>London, UK</p>
-                    <p class="Dollar">$4.2k</p>
-                    <div><img src="image/Desteminations/Vector.svg" alt=""></div>
+        </section>
+        <section class="top-selling-section">
+            <h2 class="top-selling-section-title">Top Selling</h2>
+            <h3 class="top-selling-title-top-destinations">Top Destinations</h3>
+            <div class="top-selling-box-slides">
+                <a href="https://www.sputnik8.com/ru/rome/sights/kolizey" target="_blank" class="top-selling-slides-item">
+                    <div class="top-selling-item-box">
+                        <div class="top-selling-item-box-title-city">Rome, Italty</div>
+                        <div class="top-selling-item-box-title-price">$5,42k</div>
+                        <div class="top-selling-item-box-title-duration">10 Days Trip</div>
+                    </div>
+                </a>
+                <a href="https://sozvezdie-tour.ru/tour/parizh-i-london" target="_blank" class="top-selling-slides-item">
+                    <div class="top-selling-item-box">
+                        <div class="top-selling-item-box-title-city">London, UK</div>
+                        <div class="top-selling-item-box-title-price">$4.2k</div>
+                        <div class="top-selling-item-box-title-duration">12 Days Trip</div>
+                    </div>
+                </a>
+                <div class="top-selling-slides-item-spiral">
+                    <a href="https://sozvezdie-tour.ru/tour/klassicheskaya-evropa-ot-rima-do-berlina" target="_blank" class="top-selling-slides-item">
+                        <div class="top-selling-item-box">
+                            <div class="top-selling-item-box-title-city">Full Europe</div>
+                            <div class="top-selling-item-box-title-price">$15k</div>
+                            <div class="top-selling-item-box-title-duration">28 Days Trip</div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="block3">
-                <img src="image/Desteminations/Rectangle 14 (2).svg" alt="" class="Sity">
-                <div class="TextBlock">
-                    <p>Full Europe</p>
-                    <p class="Dollar">$15k</p>
-                    <div><img src="image/Desteminations/Vector.svg" alt=""></div>
+        </section>
+        <section class="easy-fast-section">
+            <div class="easy-fast-section-content-text">
+                <h2 class="easy-fast-section-title">Easy and Fast</h2>
+                <h3 class="easy-fast-title-reservation">Book your next trip 
+                in 3 easy steps</h3>
+                <div class="easy-fast-content-text-box">
+                    <div class="easy-fast-content-box-text">
+                        <div class="easy-fast-item-text">
+                            <h4 class="easy-fast-item-text-title">Choose Destination</h4>
+                            <p class="easy-fast-item-text-comment">Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Urna, tortor tempus.</p>
+                        </div>
+                    </div>
+                    <div class="easy-fast-content-box-text">
+                        <div class="easy-fast-item-text">
+                            <h4 class="easy-fast-item-text-title">Make Payment</h4>
+                            <p class="easy-fast-item-text-comment">Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Urna, tortor tempus.</p>
+                        </div>
+                    </div>
+                    <div class="easy-fast-content-box-text">
+                        <div class="easy-fast-item-text">
+                            <h4 class="easy-fast-item-text-title">Reach Airport on Selected Date</h4>
+                            <p class="easy-fast-item-text-comment">Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Urna, tortor tempus.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>   
-    </div>
+            <div class="easy-fast-section-content-picture">
+                <div class="easy-fast-section-content-border-box-picture">
+                    <div class="easy-fast-content-box-picture">
+                        <img src="./image/easy-fast-section/easy-fast-box-picture.svg" alt="Painting of a woman in Rome" class="easy-fast-box-picture">
+                        <h4 class="easy-fast-box-picture-title">Trip To Greece</h4>
+                        <div class="easy-fast-box-picture-card">
+                            <img src="./icon/easy-fast-section/easy-fast-box-picture-card.svg" alt="Temple icon in Rome" class="easy-fast-box-picture-card-picture">
+                            <div class="easy-fast-picture-card-box-text">
+                                <div class="easy-fast-box-picture-card-comment">Ongoing</div>
+                                <div class="easy-fast-box-picture-card-title">Trip To Greece</div>
+                                <div class="easy-fast-box-picture-card-completed">
+                                    <span class="easy-fast-picture-card-completed-number">40%</span> completed
+                                    <meter class="easy-fast-completed-line" min="0" max="100" value="40">40%</meter>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="easy-fast-box-picture-comment"><time datetime="06-14">14</time>&nbsp;-&nbsp;<time datetime="06-29">29 June</time>| by Robbin joseph</p>
+                        <div class="easy-fast-picture-image-box-icons">
+                            <div class="easy-fast-picture-image-box-icon"></div>
+                            <div class="easy-fast-picture-image-box-icon"></div>
+                            <div class="easy-fast-picture-image-box-icon"></div>
+                        </div>
+                        <p class="easy-fast-box-picture-comment-bottom">24 people going<p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials-section">
+            <div class="testimonials-section-text">
+                <h2 class="testimonials-section-title">Testimonials</h2>
+                <h3 class="testimonials-section-title-reviews">What people say about Us.</h3>
+                <div class="testimonials-section-counter-slides">
+                    <button class="testimonials-counter-slides-item is-current"></button>
+                    <button href="#" class="testimonials-counter-slides-item"></button>
+                    <button href="#" class="testimonials-counter-slides-item"></button>
+                </div>
+            </div>
+            <div class="testimonials-section-slides">
+                <div class="testimonials-section-slides-box">
+                    <div class="testimonials-content-slides-item testimonials-slide-one-review">
+                        <div class="testimonials-slide-comment">
+                            “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                        </div>
+                        <div class="testimonials-slide-name">Mike taylor</div>
+                        <div class="testimonials-slide-location">Lahore,Pakistan</div>
+                    </div>
+                    <div class="testimonials-content-slides-item testimonials-content-slide-two-review">
+                        <div class="testimonials-slide-name">Chris Thomas</div>
+                        <div class="testimonials-slide-location">CEO of Red Button</div>
+                    </div>
+                </div>
+            
+                <div class="testimonials-section-slides-switch">
+                    <div class="arrow-slide-review">
+                        <div class="testimonials-slides-switch-up"></div>
+                    </div>
+                    <div class="arrow-slide-review">
+                        <div class="testimonials-slides-switch-down"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cooperation-section">
+            <div class="cooperation-box">
+                <a href="#" class="link-company-item" blank="_target">
+                    <div class="company-item"></div>
+                </a>
+                <a href="#" class="link-company-item" blank="_target">
+                    <div class="company-item"></div>
+                </a>
+                <a href="#" class="link-company-item" blank="_target">
+                    <div class="company-item"></div>
+                </a>
+                <a href="#" class="link-company-item" blank="_target">
+                    <div class="company-item"></div>
+                </a>
+                <a href="#" class="link-company-item" blank="_target">
+                    <div class="company-item"></div>
+                </a>
+            </div>
+        </section>
+        <section class="subscription-section">
+            <div class="subscription-box-first">
+                <div class="subscription-box-second">
+                    <div class="subscription-content-box">
+                        <h2 class="subscription-content-title">Subscribe to get information, latest news and other
+                        interesting offers about Jadoo</h2>
+                        <div class="subscription-content-input-box">
+                            <div class="subscription-content-input-box-icon">
+                                <input type="text" class="subscription-input-text" placeholder="Your email"/>
+                            </div>
+                            <button type="button" class="subscription-input-button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="footer-info">
+            <div class="footer-title-company">
+                <a href="#" class="footer-company">Jadoo.</a>
+                <div class="footer-company-slogan">
+                    Book your trip in minute, get full Control for much longer.
+                </div>
+            </div>
+            <div class="footer-info-box">
+                <div class="footer-info-box-title">Company</div>
+                <div class="footer-info-box-link">
+                    <a href="#" class="footer-info-box-link-item">About</a>
+                    <a href="#" class="footer-info-box-link-item">Careers</a>
+                    <a href="#" class="footer-info-box-link-item">Mobile</a>
+                </div>
+            </div>
+            <div class="footer-info-box">
+                <div class="footer-info-box-title">Contact</div>
+                <div class="footer-info-box-link">
+                    <a href="#" class="footer-info-box-link-item">Help/FAQ</a>
+                    <a href="#" class="footer-info-box-link-item">Press</a>
+                    <a href="#" class="footer-info-box-link-item">Affilates</a>
+                </div>
+            </div>
+            <div class="footer-info-box">
+                <div class="footer-info-box-title">More</div>
+                <div class="footer-info-box-link">
+                    <a href="#" class="footer-info-box-link-item">Airlinefees</a>
+                    <a href="#" class="footer-info-box-link-item">Airline</a>
+                    <a href="#" class="footer-info-box-link-item">Low fare tips</a>
+                </div>
+            </div>
+            <div class="footer-info-social-media-box">
+                <a href="#" class="footer-icon-facebook"></a>
+                <a href="#" class="footer-icon-instagram"></a>
+                <a href="#" class="footer-icon-twitter"></a>
+                <span class="footer-title-link-install">Discover our app</span>
+                <div class="footer-box-link-install">
+                    <a href="#" class="footer-link-install-google-play"></a>
+                    <a href="#" class="footer-link-install-apple-store"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-rights">All rights reserved@jadoo.com</div>
+    </footer>
 </body>
 </html>

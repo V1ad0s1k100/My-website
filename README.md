@@ -1,24 +1,32 @@
-**My-website**
+The repository description is currently not set. The homepage is [here](https://v1ad0s1k100.github.io/Мой-сайт/).
 
-Этот репозиторий содержит исходный код для личного веб-сайта.
+Let's draft an initial README content for your repository:
 
-**Состав**
+---
 
-- **CSS**: 57.4%
-- **HTML**: 42.6%
+# My-website
 
-**Описание**
+This repository contains the source code for my personal website. The website is built using HTML and CSS.
 
-Этот проект представляет собой статический веб-сайт, созданный с использованием HTML и CSS. Он включает в себя различные стили и макеты для демонстрации контента.
+## Project Structure
 
-**Структура проекта**
+- `index.html`: The main HTML file for the website.
+- `styles.css`: The CSS file containing styles for the website.
 
-- **index.html**: Главная страница сайта.
-- **styles/**: Директория, содержащая файлы CSS.
+## Setup Instructions
 
-**Установка**
+To view the website locally:
 
-1. Клонируйте репозиторий:
-   ```bash
-   git clone https://github.com/V1ad0s1k100/My-website.git
-   ```
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/V1ad0s1k100/My-website.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd My-website
+    ```
+3. Open `index.html` in your web browser to view the website.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
